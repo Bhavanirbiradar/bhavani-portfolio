@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavani | About</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about" class="about-section">
+  <h2 class="section-title">About Me</h2>
+  <p class="about-subtitle">Curious coder & innovator from Bengaluru with a passion for cybersecurity and AI.</p>
+
+  <div class="about-card reveal">
+    <div class="about-photo-container">
+      <img src="Bhavani.jpg" alt="Bhavani" class="about-photo">
+    </div>
+    <div class="about-info">
+      <p class="about-text">
+        Hi! I'm <strong>Bhavani</strong>, currently pursuing B.E. in Computer Science & Engineering with a specialization in Cybersecurity at Ramaiah Institute of Technology. My journey blends AI, full-stack development, and secure design thinking — transforming complex ideas into practical, user-centric solutions.
+      </p>
+
+      <div class="about-icons">
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:bhavanibiradar2004@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+      
+      <a href="https://drive.google.com/file/d/1LTP5MMojnsvmQ5LIpoP9SUPr3jhZnMUP/view?usp=drivesdk" class="resume-btn" download> <i class="fas fa-download"></i> View Resume </a>
+    </div>
+  </div>
+
+  <h3 class="education-title">Education</h3>
+<div class="education-box reveal">
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="year">2020</span>
+      <p>Kitturu Rani Chennamma School – Scored 91.84%</p>
+    </div>
+    <div class="timeline-item">
+      <span class="year">2022</span>
+      <p>Diamond PU College – PCMB with 93.83%</p>
+    </div>
+    <div class="timeline-item">
+      <span class="year">2022–2026</span>
+      <p>B.E. in CSE (Cyber Security) at Ramaiah Institute of Technology – CGPA: 8.45</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <blockquote class="about-quote reveal">
+    “Turning innovative ideas into secure, human-centered technology.”
+  </blockquote>
+</section>
+<footer>
+  &copy; 2025 Bhavani Biradar. All rights reserved.
+</footer>
+
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      }
+    }
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll); // run on page load too
+</script>
+</body>
+</html>

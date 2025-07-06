@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavani | Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #f1f1f1;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
+  #particles-js {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+  }
+
+  nav {
+    background: rgba(0,0,0,0.5);
+    padding: 10px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0; padding: 0;
+  }
+
+  nav li { margin: 0 15px; }
+
+  nav a {
+    text-decoration: none;
+    color: #00d4ff;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  nav a:hover { color: #66fcf1; }
+
+  .overlay {
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 140px 20px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #00d4ff, #66fcf1, #00d4ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite, fadeInUp 1.2s ease forwards;
+    opacity: 0;
+  }
+
+  #typing {
+    font-size: 1.2em;
+    color: #f1f1f1;
+    border-right: 2px solid #00d4ff;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 10px;
+    animation: fadeInUp 1.8s ease forwards;
+    opacity: 0;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00d4ff;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin-top: 25px;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
+    animation: fadeInUp 2.2s ease forwards;
+    opacity: 0;
+  }
+
+  .cta-btn:hover {
+    background: #66fcf1;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  }
+
+  .scroll-down {
+    font-size: 1.8em;
+    color: #00d4ff;
+    margin-top: 30px;
+    animation: bounce 2s infinite, fadeInUp 2.8s ease forwards;
+    opacity: 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0,0,0,0.4);
+    font-size: 0.9em;
+    position: relative;
+    z-index: 2;
+  }
+
+  .social a {
+    color: #00d4ff;
+    font-size: 1.4em;
+    margin: 0 8px;
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+  }
+
+  .social a:hover {
+    color: #66fcf1;
+    transform: translateY(-3px);
+    text-shadow: 0 0 8px #00d4ff;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class="overlay"></div>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <h1>Bhavani Biradar</h1>
+  <div><span id="typing"></span></div>
+  
+</header>
+
+<footer>
+  &copy; 2025 Bhavani Biradar. All rights reserved.
+  <div class="social">
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+</footer>
+
+<!-- Particle.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  // Typing effect
+  const texts = [
+    "Cybersecurity & AI Enthusiast",
+    "Turning ideas into secure, data-driven solutions",
+    "Passionate about building real-world tech"
+  ];
+  let count = 0, index = 0, currentText = '', letter = '';
+  (function type() {
+    if (count === texts.length) count = 0;
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+    document.getElementById('typing').textContent = letter;
+    if (letter.length === currentText.length) {
+      count++;
+      index = 0;
+      setTimeout(type, 1500);
+    } else {
+      setTimeout(type, 80);
+    }
+  })();
+
+  // particles.js config
+  particlesJS('particles-js',{
+    particles: {
+      number: { value: 50 },
+      color: { value: '#00d4ff' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.4 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    }
+  });
+</script>
+</body>
+</html>
