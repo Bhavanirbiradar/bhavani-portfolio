@@ -6,7 +6,9 @@
 <title>Bhavani | Home</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
+
+   
+  <style>
   body, html {
     margin: 0;
     padding: 0;
@@ -38,15 +40,17 @@
     display: flex;
     justify-content: center;
     margin: 0; padding: 0;
+    flex-wrap: wrap;
   }
 
-  nav li { margin: 0 15px; }
+  nav li { margin: 0 10px; }
 
   nav a {
     text-decoration: none;
     color: #00d4ff;
     font-weight: 600;
     transition: color 0.3s;
+    font-size: 1em;
   }
 
   nav a:hover { color: #66fcf1; }
@@ -160,7 +164,36 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .hero h1 { font-size: 2.4em; }
+    nav a { font-size: 0.95em; }
+  }
+
+  @media (max-width: 768px) {
+    .hero { padding: 120px 15px 60px; }
+    .hero h1 { font-size: 2em; }
+    #typing { font-size: 1.1em; }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav li {
+      margin: 8px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 100px 10px 50px; }
+    .hero h1 { font-size: 1.6em; }
+    #typing { font-size: 1em; }
+    .cta-btn { padding: 8px 16px; font-size: 0.9em; }
+    footer { font-size: 0.8em; }
+    .social a { font-size: 1.2em; }
+  }
 </style>
+
 </head>
 <body>
 
