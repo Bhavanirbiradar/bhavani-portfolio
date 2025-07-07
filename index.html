@@ -192,6 +192,56 @@
     footer { font-size: 0.8em; }
     .social a { font-size: 1.2em; }
   }
+  /* Navbar container and logo */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.logo {
+  color: #00d4ff;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: #00d4ff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
 </style>
 
 </head>
@@ -201,14 +251,20 @@
 <div class="overlay"></div>
 
 <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="certifications.html">Certifications</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="nav-container">
+    <div class="logo">Bhavani</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <header class="hero">
@@ -261,5 +317,15 @@
     }
   });
 </script>
+<script>
+  // Hamburger toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
